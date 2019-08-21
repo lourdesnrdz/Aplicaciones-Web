@@ -8,9 +8,9 @@ body {
 h1 {
 	/*Este es mi header*/
 	margin: 0px;
-	padding: 20px;
+	padding: 10px;
 	font-size: 20pt;
-	/*background-color: #A52A2A;
+	background-color: #FFFFFF;
 	/*
 	#FA8072
 	#BC8F8F
@@ -24,24 +24,30 @@ h1 {
 
 h2 {
 	color: #A52A2A;
+	/*text-align: center;*/
 }
 
 h3 {
 	margin-bottom: 0px;
 }
 
+h3 .fecha {
+	text-align: right;
+}
+
 #sideBar {
 	background-color: #D3D3D3;
 	height: 100%;
-	width: max-content;
-	float: left;
+	width: 275px;
+	float: right;
 	padding: 0px 15px;
+	margin: 5px;
 }
 
 .infoGeneral {
 	padding: 5px;
-	padding-left: 25em;
-	text-align: left;
+	/*padding-left: 25em;*/
+	
 }
 
 .fecha {
@@ -60,6 +66,3 @@ h3 {
 	font-family: FontAwesome;
 }
 
-.infoGeneral h2 {
-	text-decoration-line: underline overline;
-}
