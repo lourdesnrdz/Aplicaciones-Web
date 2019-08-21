@@ -2,7 +2,7 @@ body {
 	font-family: Verdana;
 	font-size: 13px;
 	color: #6d6d6d;
-	background-color: #FFE4C4;
+	background-color: #FFE4E1;
 }
 
 h1 {
@@ -41,3 +41,14 @@ h3 {
 	font-style: italic;
 	margin-top: 0px;
 }
+
+.fa-envelope {
+	font-family: FontAwesome;
+	color: #FA8072;
+	padding-right: 5px;
+}
+
+.fa-book {
+	font-family: FontAwesome;
+}
+
