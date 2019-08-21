@@ -9,7 +9,8 @@ h1 {
 	/*Este es mi header*/
 	margin: 0px;
 	padding: 20px;
-	background-color: #A52A2A;
+	font-size: 20pt;
+	/*background-color: #A52A2A;
 	/*
 	#FA8072
 	#BC8F8F
@@ -17,7 +18,7 @@ h1 {
 
 
 	*/
-	color: #FFFFFF;
+	color:  #A52A2A;
 	text-align: center;
 }
 
@@ -30,11 +31,11 @@ h3 {
 }
 
 #sideBar {
-	background-color: #FFFFFF;
+	background-color: #D3D3D3;
 	height: 100%;
 	width: max-content;
 	float: left;
-	padding: 5px 15px;
+	padding: 0px 15px;
 }
 
 .infoGeneral {
@@ -59,3 +60,6 @@ h3 {
 	font-family: FontAwesome;
 }
 
+.infoGeneral h2 {
+	text-decoration-line: underline overline;
+}
