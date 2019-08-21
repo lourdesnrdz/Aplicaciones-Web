@@ -23,16 +23,13 @@ h1 {
 }
 
 h2 {
-	color: #A52A2A;
-	/*text-align: center;*/
+	color: #FFFFFF;
+	background-color: #A52A2A;
+	text-align: center;
 }
 
 h3 {
 	margin-bottom: 0px;
-}
-
-h3 .fecha {
-	text-align: right;
 }
 
 #sideBar {
@@ -40,15 +37,13 @@ h3 .fecha {
 	height: 100%;
 	width: 275px;
 	float: right;
-	padding: 0px 15px;
+	padding: 0px 5px;
 	margin: 5px;
 }
 
 .infoGeneral {
 	padding: 5px;
-	/*padding-left: 25em;*/
-	
-}
+	padding-right: 300px;
 
 .fecha {
 	font-size: 8.5pt;
