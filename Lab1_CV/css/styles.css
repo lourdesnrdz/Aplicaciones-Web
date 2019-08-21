@@ -9,13 +9,20 @@ h1 {
 	/*Este es mi header*/
 	margin: 0px;
 	padding: 20px;
-	background-color: #FA8072;
+	background-color: #A52A2A;
+	/*
+	#FA8072
+	#BC8F8F
+	#A52A2A
+
+
+	*/
 	color: #FFFFFF;
 	text-align: center;
 }
 
 h2 {
-	color: #FA8072
+	color: #A52A2A;
 }
 
 h3 {
@@ -44,7 +51,7 @@ h3 {
 
 .fa-envelope {
 	font-family: FontAwesome;
-	color: #FA8072;
+	color: #A52A2A;
 	padding-right: 5px;
 }
 
