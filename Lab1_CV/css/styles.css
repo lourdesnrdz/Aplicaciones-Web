@@ -71,3 +71,13 @@ h3 {
 	font-style: italic;
 	margin-top: 0px;
 }
+
+.fa-envelope {
+	font-family: FontAwesome;
+	color: #DB7093;
+}
+
+.fa-linkedin {
+	font-family: FontAwesome;
+	color: #DB7093;
+}
