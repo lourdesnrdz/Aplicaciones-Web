@@ -1,9 +1,15 @@
+html { 
+  background: url(../imagenes/background2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
 	font-family: Verdana;
 	font-size: 13px;
 	color: #6d6d6d;
-	background-color: #FFE4E1;
-
 }
 
 h1 {
@@ -12,20 +18,15 @@ h1 {
 	padding: 10px;
 	font-size: 30pt;
 	font-family: 'Paytone One', sans-serif;
-	/*font-family: 'Luckiest Guy', cursive;
-	/*background-color: #FFFFFF;
-	/*
-	#FA8072
-	#BC8F8F
-	#A52A2A
-	*/
-	color:  #A3A3A3;/*#A52A2A;*/
+	/*color:  #A3A3A3;*/
+	color: #DB8995;
 	text-align: center;
 }
 
 h2 {
 	color: #FFFFFF;
-	background-color: #A52A2A;
+	/*background-color: #A52A2A;*/
+	background-color: rgba(165,42,42,.5);
 	text-align: center;
 	font-family: 'PT Serif Caption', serif;
 	font-size: 15pt;
@@ -42,12 +43,12 @@ h3 {
 	width: 280px;
 	float: right;
 	padding: 0px 10px;
-	margin: 5px;
 }
 
 .infoGeneral {
-	padding: 5px;
-	padding-right: 315px;
+	padding: 5px 5px;
+	margin-right: 320px;
+	background-color: rgb(255,255,255,0.6);
 }
 
 .fecha {
