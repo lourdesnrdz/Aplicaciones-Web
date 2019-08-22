@@ -45,6 +45,16 @@ h3 {
 	padding: 0px 10px;
 }
 
+.fotosInfo {
+	height: 20%;
+	width: 20%;
+	float: left;
+}
+
+.detalles {
+	padding-left: 21%;
+}
+
 .infoGeneral {
 	padding: 5px 5px;
 	margin-right: 320px;
