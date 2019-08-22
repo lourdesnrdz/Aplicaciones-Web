@@ -45,9 +45,21 @@ h3 {
 	A2C4DE
 	*/
 	height: 100%;
-	width: 280px;
+	width: 290px;
 	float: right;
 	padding: 0px 10px;
+}
+
+.infoGeneral {
+	padding: 5px 5px;
+	margin-right: 320px;
+	background-color: rgb(255,255,255,0.7);
+}
+
+.fecha {
+	font-size: 8.5pt;
+	font-style: italic;
+	margin-top: 0px;
 }
 
 .fotosInfo {
@@ -60,24 +72,22 @@ h3 {
 	padding-left: 21%;
 }
 
-.infoGeneral {
-	padding: 5px 5px;
-	margin-right: 320px;
-	background-color: rgb(255,255,255,0.6);
-}
-
-.fecha {
-	font-size: 8.5pt;
-	font-style: italic;
-	margin-top: 0px;
-}
-
 .fa-envelope {
 	font-family: FontAwesome;
 	color: #DB7093;
 }
 
 .fa-linkedin {
+	font-family: FontAwesome;
+	color: #DB7093;
+}
+
+.fa-github {
+	font-family: FontAwesome;
+	color: #DB7093;
+}
+
+.fa-phone {
 	font-family: FontAwesome;
 	color: #DB7093;
 }
