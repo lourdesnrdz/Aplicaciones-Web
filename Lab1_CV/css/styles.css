@@ -26,7 +26,7 @@ h1 {
 h2 {
 	color: #FFFFFF;
 	/*background-color: #A52A2A;*/
-	background-color: rgba(165,42,42,.5);
+	background-color: rgba(165,42,42,.6);
 	text-align: center;
 	font-family: 'PT Serif Caption', serif;
 	font-size: 15pt;
@@ -38,7 +38,12 @@ h3 {
 }
 
 #sideBar {
-	background-color: #D3D3D3;
+	background-color: rgba(162,196,222,.7);
+	/*background-color: #D3D3D3;
+	#D8BFD8
+	#B0C4DE;
+	A2C4DE
+	*/
 	height: 100%;
 	width: 280px;
 	float: right;
