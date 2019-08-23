@@ -1,2 +1,2 @@
 # Aplicaciones-Web
-Laboratios clase de Desarrollo de Aplicaciones Web
+Laboratorios clase de Desarrollo de Aplicaciones Web
