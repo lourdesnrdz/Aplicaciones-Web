@@ -32,8 +32,8 @@ newitem.addEventListener("keyup", function(event) {
    		alert("Tienes que escribir algo");
    } else {
 	   	span.appendChild(text);
-	    input.appendChild(span);
-	    node.appendChild(input);
+	    //input.appendChild(text);
+	    node.appendChild(span);
 	    todolist.appendChild(node);
 	    newitem.value = "";
    }
@@ -52,3 +52,11 @@ todolist.addEventListener ('click', function() {
 	}
 })
 */
+
+var list = document.getElementsByTagName("li");
+for(var i=0; i<list.length; i++){
+ list[i].addEventListener("click", liClick);
+}
+function liClick(){
+  this.classList.toggle("done");
+}
