@@ -8,8 +8,7 @@ let todolist = document.getElementById("todolist")
 newitem.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
-   console.log("hello world");
-   var node = document.createElement("li");
+   var li = document.createElement("li");
    var input = document.createElement("input");
    var span = document.createElement("span");
    var text = document.createTextNode(newitem.value);
@@ -17,27 +16,30 @@ newitem.addEventListener("keyup", function(event) {
    input.name = "todo";
    input.value	= elements.length +1;
    span.setAttribute('name', "e");
+   //verifica que el nuevo elemento no está vacío
    if(newitem.value === ""){
+   		//si está vacio manda una alerta
    		alert("Tienes que escribir algo");
    } else {
+   		//sino lo agrega a la lista
 	   	span.appendChild(text);
-	    node.appendChild(input);
-	    node.appendChild(span);
-	    todolist.appendChild(node);
+	    li.appendChild(input);
+	    li.appendChild(span);
+	    todolist.appendChild(li);
 	    newitem.value = "";
    }
   }
 });
 
-
+//verifica si están checked y los cruza
 todolist.addEventListener('click', function checkedElement() {
-  let e = document.getElementsByName('e')
+	let e = document.getElementsByName('e')
 
-  for (let i = 0; i <elements.length; i++) {
-    if (elements[i].checked) {
-      e[i].classList.add('done');
-    } else {
-      e[i].classList.remove('done');
-    }
-  }
+	for (let i = 0; i < elements.length; i++) {
+	    if (elements[i].checked) {
+	      	e[i].classList.add('done');
+	    } else {
+	      	e[i].classList.remove('done');
+	    }
+	}
 })
