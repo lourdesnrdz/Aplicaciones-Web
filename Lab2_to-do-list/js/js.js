@@ -2,7 +2,7 @@
 let newitem = document.getElementById('newitem')
 let elements = document.getElementsByName('todo')
 let todolist = document.getElementById("todolist")
-let mynodelist = document.getElementsByTagName("LI")
+let mynodelist = document.getElementsByTagName("li")
 
 /*
 newitem.addEventListener("keyup", function(event) {
@@ -22,17 +22,20 @@ newitem.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
    console.log("hello world");
-   var node = document.createElement("LI");
-   var input = document.createElement("INPUT");
-   var span = document.createElement("SPAN");
+   var node = document.createElement("li");
+   var input = document.createElement("input");
+   var span = document.createElement("span");
    var text = document.createTextNode(newitem.value);
    input.type = "checkbox";
    input.name = "todo";
+   input.value	= elements.length +1;
+   console.log(input.value);
    if(newitem.value === ""){
    		alert("Tienes que escribir algo");
    } else {
 	   	span.appendChild(text);
 	    //input.appendChild(text);
+	    node.appendChild(input);
 	    node.appendChild(span);
 	    todolist.appendChild(node);
 	    newitem.value = "";
@@ -53,6 +56,7 @@ todolist.addEventListener ('click', function() {
 })
 */
 
+/*
 var list = document.getElementsByTagName("li");
 for(var i=0; i<list.length; i++){
  list[i].addEventListener("click", liClick);
@@ -60,3 +64,4 @@ for(var i=0; i<list.length; i++){
 function liClick(){
   this.classList.toggle("done");
 }
+*/
