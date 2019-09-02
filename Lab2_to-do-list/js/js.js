@@ -38,8 +38,6 @@ todolist.addEventListener('click', function checkedElement() {
 	for (let i = 0; i < elements.length; i++) {
 	    if (elements[i].checked) {
 	      	e[i].classList.add('done');
-	      	todolist.appendChild(elements[i]);
-	      	todolist.appendChild(e[i]);
 	    } else {
 	      	e[i].classList.remove('done');
 	    }
