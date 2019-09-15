@@ -50,7 +50,7 @@ function loadCategoriesJSON() {
 
 						if(info[i].description != null) {
 							newCategories += `
-								<label>${info[i].description}</label>
+								<label class='description'>${info[i].description}</label>
 							`
 						}
 
@@ -61,27 +61,29 @@ function loadCategoriesJSON() {
 								</div>
 							`
 
-							let newNominees = ''
-
 							for( let k = 0; k < info[i].categories[j].nominees.length; k++) {
 
 								if(info[i].categories[j].winner_id == k){
 									newCategories += `
-										<ul>
-											<li><span class='winner'>
-												${info[i].categories[j].nominees[k].nominee}
-											</span> <span>WINNER!</span></li>
-											<label>${info[i].categories[j].nominees[k].artist}</label>
-										</ul>
+										<li><span class='winner'>
+											${info[i].categories[j].nominees[k].nominee}
+										</span> <span>WINNER!</span></li>
+										<ul>${info[i].categories[j].nominees[k].artist}</ul>
+										
 									`
 								} else {
 									newCategories += `
-										<ul>
-											<li><span>
-												${info[i].categories[j].nominees[k].nominee}
-											</span></li>
-											<label>${info[i].categories[j].nominees[k].artist}</label>
-										</ul>
+										<li><span>
+											${info[i].categories[j].nominees[k].nominee}
+										</span></li>
+
+										<ul>${info[i].categories[j].nominees[k].artist}</ul>
+									`
+								}
+
+								if(info[i].categories[j].nominees[k].info != null){
+									newCategories += `
+										<ul>${info[i].categories[j].nominees[k].info}</ul>
 									`
 								}
 
@@ -103,9 +105,3 @@ function loadCategoriesJSON() {
 	})
 }
 
-
-/*
-for (let k = 0; j < info[i].categories[j].nominees.length; k++) {
-	<ul>${info[i].categories[j].nominees[k].nominee}</ul>
-}
-*/
