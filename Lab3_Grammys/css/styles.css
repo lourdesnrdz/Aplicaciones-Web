@@ -38,10 +38,9 @@ option {
 }
 
 h2 {
-  /*color: #b69859;*/
-  color: #996600;
+  color: #b69859;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 300 bold;
   font-size: 3em;
 }
 
@@ -50,16 +49,14 @@ h2 {
 }
 
 h3 {
-  /*color: #b69859;*/
-  color: #996600;
+  color: #b69859;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 2em;
 }
 
 .winner {
-  /*color: #b69859;*/
-  color: #996600;
+  color: #b69859;
 }
 
 h4 {
