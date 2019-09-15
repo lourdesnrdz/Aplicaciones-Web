@@ -4,7 +4,7 @@ $.ajax({
 	type: 'GET',
 	dataType: 'json',
 	success: function(data) {
-		console.log(data)
+		//console.log(data)
 
 		let newHtml = ''
 
@@ -91,7 +91,7 @@ function loadCategoriesJSON() {
 						}
 
 						$('#nominees_section').html(newCategories)
-						console.log(newCategories)
+						//console.log(newCategories)
 						
 					}
 				}
