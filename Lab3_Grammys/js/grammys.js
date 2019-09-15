@@ -61,13 +61,36 @@ function loadCategoriesJSON() {
 								</div>
 							`
 
+							let newNominees = ''
 
+							for( let k = 0; k < info[i].categories[j].nominees.length; k++) {
+
+								if(info[i].categories[j].winner_id == k){
+									newCategories += `
+										<ul>
+											<li><span class='winner'>
+												${info[i].categories[j].nominees[k].nominee}
+											</span> <span>WINNER!</span></li>
+											<label>${info[i].categories[j].nominees[k].artist}</label>
+										</ul>
+									`
+								} else {
+									newCategories += `
+										<ul>
+											<li><span>
+												${info[i].categories[j].nominees[k].nominee}
+											</span></li>
+											<label>${info[i].categories[j].nominees[k].artist}</label>
+										</ul>
+									`
+								}
+
+							}
 						}
 
 						$('#nominees_section').html(newCategories)
 						console.log(newCategories)
-
-						//$('#stateCapital').val(data[i].capital)
+						
 					}
 				}
 			})
