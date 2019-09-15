@@ -1,6 +1,6 @@
 
 $.ajax({
-	url: 'data/grammys.json',
+	url: 'https://lourdesnrdz.github.io/Aplicaciones-Web/Lab3_Grammys/data/grammys.json',
 	type: 'GET',
 	dataType: 'json',
 	success: function(data) {
@@ -8,10 +8,10 @@ $.ajax({
 
 		let newHtml = ''
 
-		for( let i = 0; i < data.length; i++) {
+		for( let i = 0; i < data.fields.length; i++) {
 			newHtml += `
-				<option value="${data[i].field_id}">
-					${data[i].field}
+				<option value="${data.fields[i].field_id}">
+					${data.fields[i].field}
 				</option>
 			`
 		}
