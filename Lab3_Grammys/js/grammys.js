@@ -44,15 +44,27 @@ function loadCategoriesJSON() {
 					if (id == info[i].field_id) {
 						let newCategories = ''
 
-						for( let j = 0; j < info[i].categories.length; j++) {
+						newCategories += `
+							<h2>${info[i].field}</h2>
+						`
+
+						if(info[i].description != null) {
 							newCategories += `
-								<div id='${info[i].categories[j].category_id}'>
-									<h2>${info[i].categories[j].category_name}</h2>
-								</div>
+								<label>${info[i].description}</label>
 							`
 						}
 
-						$('#nominees_section').append(newCategories)
+						for( let j = 0; j < info[i].categories.length; j++) {
+							newCategories += `
+								<div id='${info[i].categories[j].category_id}'>
+									<h3>${info[i].categories[j].category_name}</h3>
+								</div>
+							`
+
+
+						}
+
+						$('#nominees_section').html(newCategories)
 						console.log(newCategories)
 
 						//$('#stateCapital').val(data[i].capital)
@@ -69,3 +81,8 @@ function loadCategoriesJSON() {
 }
 
 
+/*
+for (let k = 0; j < info[i].categories[j].nominees.length; k++) {
+	<ul>${info[i].categories[j].nominees[k].nominee}</ul>
+}
+*/
