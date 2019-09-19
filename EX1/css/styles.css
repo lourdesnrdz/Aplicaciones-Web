@@ -143,3 +143,6 @@ div.star_container {
 /* ----------------------------- */
 /*Agregar nuevos estilos aqui*/
 
+.hidden {
+  display: none;
+}
