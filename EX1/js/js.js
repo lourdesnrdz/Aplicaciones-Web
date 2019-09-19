@@ -112,10 +112,14 @@ btn_publicar.addEventListener('click', function() {
 
   }
 
+  let stars = $("input[name='rating']:checked").val()
+  let stars2 = getStarsSpans(stars)
+
   let seccion_reviews =  document.getElementById('seccion_reviews')
   if(flag){
 
     seccion_reviews.append(div_nombre)
+    seccion_reviews.append(stars)
     seccion_reviews.append(div_email)
     seccion_reviews.append(div_comment)
 
@@ -161,6 +165,8 @@ html = '
 <span class="fa fa-star"></span>
 '
 */
+
+
 function getStarsSpans(stars) {
   let new_html = '';
   for( let i = 0; i < stars; i++) {
