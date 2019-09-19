@@ -84,6 +84,7 @@ btn_publicar.addEventListener('click', function() {
     flag = true
 
     var div_nombre = document.createElement("div");
+    div_nombre.classList.add('nombre')
     div_nombre.textContent = nombre.value
   }
 
