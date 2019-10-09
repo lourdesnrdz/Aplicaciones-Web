@@ -3,7 +3,7 @@ const credentials = require('./credentials.js')
 
 const request = require('request')
 
-const darksyForecast = function (longitude, latitude) {
+const forecast = function (longitude, latitude) {
 	const url = 'https://api.darksky.net/forecast/' + credentials.DARK_SKY_SECRET_KEY + '/' + latitude + ',' + longitude + '?&units=si'
 
 	request({url, json:true}, function(error, response) {
@@ -23,6 +23,7 @@ const darksyForecast = function (longitude, latitude) {
 				timezone: data.timezone,
 				summary: data.currently.summary,
 				precipProbability: data.currently.precipProbability * 100 + '%',
+				humidity: data.currently.humidity * 100 + '%',
 				hourly: data.hourly.summary,
 				daily: data.daily.summary,
 				temperature: data.currently.temperature
@@ -35,7 +36,7 @@ const darksyForecast = function (longitude, latitude) {
 			}
 
 
-			const weather = info.summary + '. The temperature is ' + info.temperature + '°C. There is ' + info.precipProbability + ' of ' + info.precipType + '. ' + info.hourly + ' ' + info.daily
+			const weather = info.summary + '. The temperature is ' + info.temperature + '°C, with ' + info.precipProbability + ' of ' + info.precipType + ', and humidity of ' + info.humidity + '. ' + info.hourly + ' ' + info.daily
 
 			console.log(weather)
 		}
@@ -69,12 +70,12 @@ const geocode = function(ciudad, callback) {
 
 			//console.log(info)
 			
-			darksyForecast(info.longitude, info.latitude)
+			forecast(info.longitude, info.latitude)
 		}
 	})
 }
 
 module.exports = {
-	darksyForecast : darksyForecast,
+	forecast : forecast,
 	geocode : geocode
 }
