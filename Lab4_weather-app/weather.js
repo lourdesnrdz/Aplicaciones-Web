@@ -4,7 +4,7 @@ const credentials = require('./credentials.js')
 const request = require('request')
 
 const darksyForecast = function (longitude, latitude) {
-	const url = 'https://api.darksky.net/forecast/' + credentials.DARK_SKY_SECRET_KEY + '/' + latitude + ',' + longitude
+	const url = 'https://api.darksky.net/forecast/' + credentials.DARK_SKY_SECRET_KEY + '/' + latitude + ',' + longitude + '?&units=si'
 
 	request({url, json:true}, function(error, response) {
 		const data = response.body
@@ -29,6 +29,7 @@ const darksyForecast = function (longitude, latitude) {
 		}
 
 		console.log(info)
+		console.log(info.summary + '. The temperature is ' + info.temperature + '°C. There is ' + info.precipProbability + ' of precipitation. ' + info.hourly + ' ' + info.daily)
 	})
 }
 
