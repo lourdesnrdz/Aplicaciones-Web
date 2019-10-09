@@ -36,7 +36,7 @@ const forecast = function (longitude, latitude) {
 			}
 
 
-			const weather = info.summary + '. The temperature is ' + info.temperature + '°C, with ' + info.precipProbability + ' of ' + info.precipType + ', and humidity of ' + info.humidity + '. ' + info.hourly + ' ' + info.daily
+			const weather = info.summary + '. The temperature today is ' + info.temperature + '°C, with ' + info.precipProbability + ' of ' + info.precipType + ', and humidity of ' + info.humidity + '. ' + info.hourly + ' ' + info.daily
 
 			console.log(weather)
 		}
