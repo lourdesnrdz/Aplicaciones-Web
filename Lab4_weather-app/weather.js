@@ -18,9 +18,14 @@ const darksyForecast = function (longitude, latitude) {
 		const info = {
 			timezone: data.timezone,
 			summary: data.currently.summary,
-			humidity: data.currently.humidity,
+			precipProbability: data.currently.precipProbability * 100 + '%',
 			hourly: data.hourly.summary,
-			daily: data.daily.summary
+			daily: data.daily.summary,
+			temperature: data.currently.temperature
+		}
+
+		if (data.currently.precipProbability){
+			info.precipType = data.currently.precipType
 		}
 
 		console.log(info)
