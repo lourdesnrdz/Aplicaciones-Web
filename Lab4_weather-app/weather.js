@@ -15,21 +15,34 @@ const darksyForecast = function (longitude, latitude) {
 		// console.log('Error: ', error)
 		// console.log('DATOS: ', data)
 
-		const info = {
-			timezone: data.timezone,
-			summary: data.currently.summary,
-			precipProbability: data.currently.precipProbability * 100 + '%',
-			hourly: data.hourly.summary,
-			daily: data.daily.summary,
-			temperature: data.currently.temperature
+		if (data.error) {
+			console.log(data.error)
+		}
+		else {
+			const info = {
+				timezone: data.timezone,
+				summary: data.currently.summary,
+				precipProbability: data.currently.precipProbability * 100 + '%',
+				hourly: data.hourly.summary,
+				daily: data.daily.summary,
+				temperature: data.currently.temperature
+			}
+
+			if (data.currently.precipProbability){
+				info.precipType = data.currently.precipType
+			} else {
+				info.precipType = 'precipitation'
+			}
+
+
+			const weather = info.summary + '. The temperature is ' + info.temperature + '°C. There is ' + info.precipProbability + ' of ' + info.precipType + '. ' + info.hourly + ' ' + info.daily
+
+			console.log(weather)
 		}
 
-		if (data.currently.precipProbability){
-			info.precipType = data.currently.precipType
-		}
-
-		console.log(info)
-		console.log(info.summary + '. The temperature is ' + info.temperature + '°C. There is ' + info.precipProbability + ' of precipitation. ' + info.hourly + ' ' + info.daily)
+		
+		// console.log(info)
+		
 	})
 }
 
@@ -39,18 +52,25 @@ const geocode = function(ciudad, callback) {
 	request({url, json:true}, function(error, response) {
 		const data = response.body
 
+		// Error:  null
+		// DATOS:  { message: 'Not Found' }
+
 		// console.log('Error: ', error)
 		// console.log('DATOS: ', data)
 
-		const info = {
+		if (data.message) {
+			console.log(data.message)
+		} else {
+			const info = {
 				place_name: data.features[0].place_name,
 				longitude: data.features[0].geometry.coordinates[0],
 				latitude: data.features[0].geometry.coordinates[1]
-		}
+			}
 
-		console.log(info)
-		
-		darksyForecast(info.longitude, info.latitude)
+			//console.log(info)
+			
+			darksyForecast(info.longitude, info.latitude)
+		}
 	})
 }
 
