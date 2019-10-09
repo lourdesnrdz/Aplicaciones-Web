@@ -63,8 +63,8 @@ const geocode = function(ciudad, callback) {
 		} else {
 			const info = {
 				place_name: data.features[0].place_name,
-				longitude: data.features[0].geometry.coordinates[0],
-				latitude: data.features[0].geometry.coordinates[1]
+				longitude: data.features[0].center[0],
+				latitude: data.features[0].center[1]
 			}
 
 			//console.log(info)
