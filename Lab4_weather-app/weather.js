@@ -15,7 +15,9 @@ const forecast = function (longitude, latitude) {
 		// console.log('Error: ', error)
 		// console.log('DATOS: ', data)
 
-		if (data.error) {
+		if (error){
+			console.log(error)
+		} else if (data.error) {
 			console.log(data.error)
 		}
 		else {
@@ -47,7 +49,7 @@ const forecast = function (longitude, latitude) {
 	})
 }
 
-const geocode = function(ciudad, callback) {
+const geocode = function(ciudad) {
 	const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + ciudad + '.json?access_token=' + credentials.MAPBOX_TOKEN
 	
 	request({url, json:true}, function(error, response) {
@@ -59,7 +61,9 @@ const geocode = function(ciudad, callback) {
 		// console.log('Error: ', error)
 		// console.log('DATOS: ', data)
 
-		if (data.message) {
+		if (error) {
+			console.log(error)
+		} else if (data.message) {
 			console.log(data.message)
 		} else {
 			const info = {
