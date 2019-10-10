@@ -61,6 +61,15 @@ const geocode = function(ciudad) {
 		// console.log('Error: ', error)
 		// console.log('DATOS: ', data)
 
+		// setTimeout(function() {
+		// 	const info = {
+		// 		place_name: data.features[0].place_name,
+		// 		longitude: data.features[0].center[0],
+		// 		latitude: data.features[0].center[1]
+		// 	}
+		// 	forecast(info.longitude, info.latitude)
+		// }, 2000)
+
 		if (error) {
 			console.log(error)
 		} else if (data.message) {
