@@ -9,11 +9,7 @@ const weather = require('./weather.js')
 // 	}
 // })
 
-// weather.geocode('New York')
-
 weather.geocode('New York', function(error, data) {
-	// console.log(data)
-
 	if(error){
 		console.log(error)
 	} else {
@@ -27,6 +23,3 @@ weather.geocode('New York', function(error, data) {
 	}
 })
 
-// weather.geocode('Alaska', function(data) {
-// 	console.log(data)
-// })
