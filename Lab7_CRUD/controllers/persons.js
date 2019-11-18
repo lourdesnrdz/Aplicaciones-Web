@@ -12,7 +12,7 @@ const getPersons = function(req, res) {
 const getPerson = function(req, res) {
   _id = req.params.id
   Person.findById(_id).then(function(person) {
-    console.log(person)
+    // console.log(person)
     return res.send(person)
   }).catch(function(error) {
     return res.status(404).send({})
@@ -31,7 +31,7 @@ const createPerson = function(req, res) {
 const updatePerson = function(req, res) {
   const _id = req.params.id
   const updates = Object.keys(req.body)
-  const allowedUpdates = ['name', 'age', 'born', 'timeline', 'alliegance', 'playedBy', 'titles', 'father', 'mother', 'spouse']
+  const allowedUpdates = ['name', 'age', 'born', 'timeline', 'alliegance', 'titles', 'playedBy', 'father', 'mother', 'spouse']
   // revisa que los updates enviados sean permitidos, que no envie una key que no permitimos
   const isValidUpdate = updates.every((update) => allowedUpdates.includes(update))
 
@@ -40,7 +40,7 @@ const updatePerson = function(req, res) {
       error: 'Invalid update, only allowed to update: ' + allowedUpdates
     })
   }
-  Person.findByIdAndUpdate(_id, req.body ).then(function(person) {
+  User.findByIdAndUpdate(_id, req.body ).then(function(person) {
     if (!person) {
       return res.status(404).send({})
     }
