@@ -31,15 +31,17 @@ const createPerson = function(req, res) {
 const updatePerson = function(req, res) {
   const _id = req.params.id
   const updates = Object.keys(req.body)
+  console.log(updates)
+  console.log(req.body)
   const allowedUpdates = ['name', 'age', 'born', 'timeline', 'alliegance', 'titles', 'playedBy', 'father', 'mother', 'spouse']
   // revisa que los updates enviados sean permitidos, que no envie una key que no permitimos
-  const isValidUpdate = updates.every((update) => allowedUpdates.includes(update))
+  // const isValidUpdate = updates.every((update) => allowedUpdates.includes(update))
 
-  if( !isValidUpdate ) {
-    return res.status(400).send({
-      error: 'Invalid update, only allowed to update: ' + allowedUpdates
-    })
-  }
+  // if( !isValidUpdate ) {
+  //   return res.status(400).send({
+  //     error: 'Invalid update, only allowed to update: ' + allowedUpdates
+  //   })
+  // }
   Person.findByIdAndUpdate(_id, req.body ).then(function(person) {
     if (!person) {
       return res.status(404).send({})
