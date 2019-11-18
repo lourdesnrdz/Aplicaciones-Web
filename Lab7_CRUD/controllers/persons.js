@@ -40,7 +40,7 @@ const updatePerson = function(req, res) {
       error: 'Invalid update, only allowed to update: ' + allowedUpdates
     })
   }
-  User.findByIdAndUpdate(_id, req.body ).then(function(person) {
+  Person.findByIdAndUpdate(_id, req.body ).then(function(person) {
     if (!person) {
       return res.status(404).send({})
     }
@@ -59,7 +59,6 @@ const deletePerson = function(req, res) {
     }
     return res.send(person)
   }).catch(function(error) {
-    console.log("NOT FOUND")
     res.status(505).send(error)
   })
 }
