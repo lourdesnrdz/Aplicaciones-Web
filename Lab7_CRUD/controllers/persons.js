@@ -12,6 +12,7 @@ const getPersons = function(req, res) {
 const getPerson = function(req, res) {
   _id = req.params.id
   Person.findById(_id).then(function(person) {
+    console.log(person)
     return res.send(person)
   }).catch(function(error) {
     return res.status(404).send({})
